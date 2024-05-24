@@ -7,5 +7,8 @@ export default defineConfig({
       entry: 'src/index.ts',
       formats: ['es'],
     },
+    rollupOptions: {
+      external: ['@github/webauthn-json/browser-ponyfill'],
+    },
   },
 })

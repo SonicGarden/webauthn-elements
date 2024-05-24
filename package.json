@@ -1,9 +1,9 @@
 {
   "name": "@sonicgarden/webauthn-elements",
   "version": "0.1.0",
-  "description": "Boilerplate for creating a custom element.",
-  "main": "dist/custom-element.js",
-  "module": "dist/custom-element.js",
+  "description": "Webauthn custom element.",
+  "main": "dist/webauthn-elements.js",
+  "module": "dist/webauthn-elements.js",
   "type": "module",
   "types": "types/index.d.ts",
   "license": "MIT",
@@ -26,6 +26,7 @@
   "devDependencies": {
     "@github/browserslist-config": "^1.0.0",
     "@github/prettier-config": "^0.0.6",
+    "@types/node": "^20.12.12",
     "eslint": "^8.57.0",
     "eslint-plugin-custom-elements": "^0.0.8",
     "eslint-plugin-github": "5.0.0-2",
