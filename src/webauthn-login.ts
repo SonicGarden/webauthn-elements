@@ -22,11 +22,10 @@ export class WebauthnLogin extends HTMLElement {
 
   connectedCallback(): void {
     if (!supported()) {
-      if (this._internals.form) {
-        this._internals.form.hidden = true
-      }
+      this.dispatchEvent(new CustomEvent('unsupported'))
       return
     }
+
     this._internals.form?.addEventListener('submit', this.handleSubmit)
   }
 

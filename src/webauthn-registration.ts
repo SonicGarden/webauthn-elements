@@ -1,6 +1,7 @@
 import {
   create,
   parseCreationOptionsFromJSON,
+  supported,
   type CredentialCreationOptionsJSON,
 } from '@github/webauthn-json/browser-ponyfill'
 
@@ -20,6 +21,11 @@ export class WebauthnRegistration extends HTMLElement {
   }
 
   connectedCallback(): void {
+    if (!supported()) {
+      this.dispatchEvent(new CustomEvent('unsupported'))
+      return
+    }
+
     this._internals.form?.addEventListener('submit', this.handleSubmit)
   }
 
