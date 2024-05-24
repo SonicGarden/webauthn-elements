@@ -1,15 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>custom-element demo</title>
-  </head>
-  <body>
-    <custom-element></custom-element>
 
-    <script type="module">
-      // import 'https://unpkg.com/@github/custom-element-boilerplate@latest/dist/custom-element.js'
-      import '../src/custom-element.ts'
-    </script>
-  </body>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport"
+    content="width=device-width user-scalable=no initial-scale=1.0 minimum-scale=1.0 maximum-scale=1.0">
+  <title>webauthn-elements demo</title>
+</head>
+
+<body>
+  <main>
+    <div>
+      <h1>&lt;webauthn-login&gt; element</h1>
+      <form>
+        <webauthn-login name="credential_json"
+          options="{&quot;challenge&quot;:&quot;oXeZvDJ2r57leVt7FAomn0d2WwdZf2U6HawxYXEj8rk&quot;,&quot;timeout&quot;:120000,&quot;extensions&quot;:{},&quot;allowCredentials&quot;:[],&quot;userVerification&quot;:&quot;required&quot;}">
+        </webauthn-login>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+    <div>
+      <h1>&lt;webauthn-registration&gt; element</h1>
+      <form>
+        <webauthn-registration name="credential_json"
+          options='{"challenge":"hstP4YZVY6ms5eLnk998rCjDDMmyPtFOdGe2bYwIWo4","timeout":120000,"extensions":{},"rp":{"name":"Example"},"user":{"name":"Tester","id":"-HKNEnhBtX87oOJZTS8cnQcZJXAPskyjIjO9kq7NFhuh8wM-Pl7V6x8zhMW2GuG3JnxP-RXTIIisW3v8Y6sG_w","displayName":"Tester"},"pubKeyCredParams":[{"type":"public-key","alg":-7},{"type":"public-key","alg":-37},{"type":"public-key","alg":-257}],"authenticatorSelection":{"requireResidentKey":true,"residentKey":"required","userVerification":"required"},"excludeCredentials":[]}'>
+        </webauthn-registration>
+        <button type="submit">Registration</button>
+      </form>
+    </div>
+  </main>
+  <script type="module">
+    import 'https://cdn.skypack.dev/@sonicgarden/webauthn-elements'
+    // import './src/index.ts'
+  </script>
+</body>
+
 </html>
