@@ -1,33 +1,36 @@
 {
   "name": "@sonicgarden/webauthn-elements",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Boilerplate for creating a custom element.",
   "main": "dist/custom-element.js",
   "module": "dist/custom-element.js",
   "type": "module",
-  "types": "dist/custom-elements.d.ts",
+  "types": "types/index.d.ts",
   "license": "MIT",
-  "repository": "github/custom-element-boilerplate",
+  "repository": "sonicgarden/webauthn-elements",
   "files": [
     "dist"
   ],
   "scripts": {
-    "clean": "rm -rf dist",
+    "clean": "rm -rf dist types",
     "lint": "eslint . --ext .ts,.js",
-    "prebuild": "npm run clean && npm run lint && mkdir dist",
-    "build": "tsc",
-    "start": "web-dev-server --node-resolve --open --watch --app-index=examples/index.html --root-dir=. --esbuild-target auto",
-    "prepublishOnly": "npm run build",
-    "postpublish": "npm publish --ignore-scripts --@github:registry='https://npm.pkg.github.com'"
+    "prebuild": "pnpm run clean && pnpm run lint && mkdir dist",
+    "build": "tsc && vite build",
+    "dev": "vite --open",
+    "prepublishOnly": "pnpm run build"
   },
   "prettier": "@github/prettier-config",
+  "dependencies": {
+    "@github/webauthn-json": "^2.1.1"
+  },
   "devDependencies": {
     "@github/browserslist-config": "^1.0.0",
     "@github/prettier-config": "^0.0.6",
     "eslint": "^8.57.0",
     "eslint-plugin-custom-elements": "^0.0.8",
     "eslint-plugin-github": "5.0.0-2",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "vite": "^5.2.11"
   },
   "customElements": "custom-elements.json",
   "packageManager": "pnpm@9.1.0"

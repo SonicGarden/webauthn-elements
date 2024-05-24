@@ -1,11 +1,11 @@
-# &lt;custom-element&gt; element
+# &lt;webauthn&gt; elements
 
 Boilerplate for creating a custom element.
 
 ## Installation
-Available on [npm](https://www.npmjs.com/) as [**@github/custom-element-element**](https://www.npmjs.com/package/@github/custom-element-element).
+Available on [npm](https://www.npmjs.com/) as [**@sonicgarden/webauthn-elements**](https://www.npmjs.com/package/@sonicgarden/webauthn-elements).
 ```
-$ npm install --save @github/custom-element-element
+$ npm install --save @sonicgarden/webauthn-elements
 ```
 
 ## Usage
@@ -15,13 +15,13 @@ $ npm install --save @github/custom-element-element
 Import as ES modules:
 
 ```js
-import '@github/custom-element-element'
+import '@sonicgarden/webauthn-elements'
 ```
 
 Include with a script tag:
 
 ```html
-<script type="module" src="./node_modules/@github/custom-element-element/dist/index.js">
+<script type="module" src="./node_modules/@sonicgarden/webauthn-elements/dist/index.js">
 ```
 
 An example Custom Element. This documentation ends up in the
