@@ -36,6 +36,10 @@ These custom elements can be used within HTML forms. The registration and login 
 </form>
 ```
 
+### Events
+- `unsupported`: Triggered during the connectedCallback timing if the browser does not support WebAuthn.
+- `error`: Triggered when the authentication dialog is cancelled, etc.
+
 ## License
 
 Distributed under the MIT license. See LICENSE for details.
