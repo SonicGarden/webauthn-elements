@@ -3,10 +3,14 @@
   "version": 1.1,
   "tags": [
     {
-      "name": "custom-element",
-      "description": "An example Custom Element. This documentation ends up in the\nREADME so describe how this elements works here.\n\nYou can event add examples on the element is used with Markdown.\n\n```\n<custom-element></custom-element>\n```\n---\n",
-      "attributes": [],
-      "references": []
+      "name": "webauthn-login",
+      "description": "WebAuthn login element.",
+      "attributes": [{ "name": "name" }, { "name": "options", "description": "PublicKeyCredentialRequestOptionsJSON" }]
+    },
+    {
+      "name": "webauthn-registration",
+      "description": "WebAuthn registration element.",
+      "attributes": [{ "name": "name" }, { "name": "options", "description": "PublicKeyCredentialCreationOptionsJSON" }]
     }
   ]
 }
