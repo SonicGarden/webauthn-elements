@@ -34,10 +34,10 @@ export class WebauthnLogin extends HTMLElement {
   }
 
   private handleSubmit = async (event: SubmitEvent) => {
+    event.preventDefault()
     if (this._submitting) return
 
     this._submitting = true
-    event.preventDefault()
     const credentialOptions = parseRequestOptionsFromJSON({publicKey: this.options})
 
     try {
