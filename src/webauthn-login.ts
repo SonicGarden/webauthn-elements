@@ -21,11 +21,6 @@ export class WebauthnLogin extends HTMLElement {
   }
 
   connectedCallback(): void {
-    if (!supported()) {
-      this.dispatchEvent(new CustomEvent('unsupported'))
-      return
-    }
-
     this._internals.form?.addEventListener('submit', this.handleSubmit)
   }
 
@@ -35,6 +30,10 @@ export class WebauthnLogin extends HTMLElement {
 
   private handleSubmit = async (event: SubmitEvent) => {
     event.preventDefault()
+    if (!supported()) {
+      this.dispatchEvent(new CustomEvent('unsupported'))
+      return
+    }
     if (this._submitting) return
 
     this._submitting = true
