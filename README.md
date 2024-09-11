@@ -40,6 +40,10 @@ These custom elements can be used within HTML forms. The registration and login 
 - `unsupported`: Triggered during the form submit timing if the browser does not support WebAuthn.
 - `error`: Triggered when the authentication dialog is cancelled, etc.
 
+## Browser support
+
+If support for Safari versions below 16.4 is needed, please install the `element-internals-polyfill`.
+
 ## License
 
 Distributed under the MIT license. See LICENSE for details.
