@@ -1,6 +1,6 @@
 {
   "name": "@sonicgarden/webauthn-elements",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Webauthn custom element.",
   "main": "dist/webauthn-elements.js",
   "module": "dist/webauthn-elements.js",
