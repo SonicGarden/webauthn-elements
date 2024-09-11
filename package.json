@@ -9,7 +9,8 @@
   "license": "MIT",
   "repository": "sonicgarden/webauthn-elements",
   "files": [
-    "dist"
+    "dist",
+    "types"
   ],
   "scripts": {
     "clean": "rm -rf dist types",
