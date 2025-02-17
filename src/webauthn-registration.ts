@@ -17,10 +17,10 @@ export class WebauthnRegistration extends HTMLElement {
   constructor() {
     super()
     this._internals = this.attachInternals()
-    this.hidden = true
   }
 
   connectedCallback(): void {
+    this.hidden = true
     this._internals.form?.addEventListener('submit', this.handleSubmit)
   }
 
